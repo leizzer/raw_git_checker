@@ -1,4 +1,4 @@
-===========
+
 Git Checker
 ===========
 
@@ -14,7 +14,7 @@ Usage:
 2. Execute the git_checker.rb in your git repository that you want to check. 	 
 
 Pro-usage:
-1. Open your .bash_profile file and add this line:
-alias check='ruby ~/git_checker.rb'
-2. Reload your terminal
+1. Open your .bash_profile file and add this line.
+`alias check='ruby ~/git_checker.rb'`
+2. Reload your terminal.
 3. Execute the check command (alias) in your git repository that you wan to check.
