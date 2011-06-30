@@ -78,28 +78,28 @@ module Checker
     puts @remote.missing_branches(@local.list_of_branches) - IGNORE_BRANCHES
   end
 
-  def branches_not_merged_with_staging
+  def branches_not_merged_with_master
     branches = []
-    branch = @local.branches["staging"]
+    branch = @local.branches["master"]
     @local.branches.each_value do |b|
       unless IGNORE_BRANCHES.include? b.name
         branches << b.name if branch.merges_with(b.name).empty?
       end
     end
 
-    puts "\n\n\e[1m\e[36m\e[7m########### Branches not in Staging ###########\e[m\e[m\e[m"
+    puts "\n\n\e[1m\e[36m\e[7m########### Branches not in Master ###########\e[m\e[m\e[m"
     puts branches
   end
 
-  def commits_not_merged_with_staging
-    puts "\n\n\e[1m\e[36m\e[7m############ Commits not in Staging ###########\e[m\e[m\e[m"
+  def commits_not_merged_with_master
+    puts "\n\n\e[1m\e[36m\e[7m############ Commits not in Master ###########\e[m\e[m\e[m"
 
-    staging = @local.branches["staging"]
+    master = @local.branches["master"]
     @local.branches.each_value do |branch|
       unless IGNORE_BRANCHES.include? branch.name
-        log = staging.commits_not_merged_from branch
+        log = master.commits_not_merged_from branch
         unless log.empty?
-          puts "\n\n\e[1m\e[31m\e[7m++++ #{branch.name}: Commits not on Staging ++++\e[m\e[m\e[m"
+          puts "\n\n\e[1m\e[31m\e[7m++++ #{branch.name}: Commits not on Master ++++\e[m\e[m\e[m"
           puts log
         end
       end
@@ -110,5 +110,5 @@ end
 
 include Checker
 Checker::local_branches_not_in_remote
-Checker::branches_not_merged_with_staging
-Checker::commits_not_merged_with_staging
+Checker::branches_not_merged_with_master
+Checker::commits_not_merged_with_master
