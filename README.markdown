@@ -5,7 +5,7 @@ The raw_git_checker is a raw (rly?) version of the git_checker (not existing yet
 
 Screenshot: http://dl.dropbox.com/u/5847684/Screen%20shot%202011-06-30%20at%201.05.43%20PM.png
 
-(note: in the screenshot I'm using zsh, in this case the prompt is that "-> git(429)")
+(note: in the screenshot I'm using zsh, in my case the prompt is that "-> git(issue-432)")
 
 It consist in two ruby clases, a module (where I put my script, what I realy want to do) and the invoke of that scripts at the bottom.
 
