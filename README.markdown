@@ -27,3 +27,11 @@ Usage:
 ------
 
 There is not specific "usage" since that you can make your own script, but basically: less output, more good.
+
+Note:
+-----
+
+The merges with the branches have to be with the option --no-ff for better results (and it's a good practice). Basically --no-ff force git to create a commit always when you merge.
+
+Example:
+`git merge issue-111 --no-ff`
