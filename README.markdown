@@ -1,3 +1,7 @@
+===========
+Git Checker
+===========
+
 The raw_git_checker is a raw (rly?) version of the git_checker (not existing yet).
 
 Screenshot: http://dl.dropbox.com/u/5847684/Screen%20shot%202011-06-30%20at%201.05.43%20PM.png
