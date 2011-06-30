@@ -12,7 +12,7 @@ It's like a Test for your git.
 Install:
 --------
 
-1. Modify the module Checker for cover your needs (or not, but you probably have the branch Master, and not Staging).
+1. Modify the module Checker for cover your needs.
 2. Execute the git_checker.rb in your git repository that you want to check. 	 
 
 Pro-install:
