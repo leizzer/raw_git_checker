@@ -60,7 +60,7 @@ class Branch
   private
   def with_repo repo
     if repo
-      "{repo}/"
+      "#{repo}/"
     end
   end
 end
