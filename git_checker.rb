@@ -19,7 +19,7 @@ class Checker
   end
 
   def local_branches_not_in_remote
-    puts "\n\n\e[1m\e[36m\e[7m############# Locals not in Remote ############\e[m\e[m\e[m"
+    print_message "Locals not in Remote"
     puts @remote.missing_branches(@local.list_of_branches) - IGNORE_BRANCHES
   end
 
@@ -32,12 +32,12 @@ class Checker
       end
     end
 
-    puts "\n\n\e[1m\e[36m\e[7m########### Branches not in Master ###########\e[m\e[m\e[m"
+    print_message "Branches not in Master"
     puts branches
   end
 
   def commits_not_merged_with_master
-    puts "\n\n\e[1m\e[36m\e[7m############ Commits not in Master ###########\e[m\e[m\e[m"
+    print_message "Commits not in Master", :pound => '+'
 
     master = @local.branches["master"]
     @local.branches.each_value do |branch|
